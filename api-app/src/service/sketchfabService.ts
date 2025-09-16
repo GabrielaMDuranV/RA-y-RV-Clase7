@@ -2,15 +2,14 @@ import axios from 'axios';
 
 const API_BASE_URL = 'https://dog.ceo/api';
 
-// Interface for the API response
 export interface DogImageResponse {
   message: string;
   status: string;
 }
 
-// Service to handle API calls
+
 export const dogService = {
-  // Get random dog image
+
   getRandomDogImage: async (): Promise<DogImageResponse> => {
     try {
       const response = await axios.get<DogImageResponse>(
@@ -23,7 +22,7 @@ export const dogService = {
     }
   },
 
-  // Get multiple random dog images
+
   getMultipleRandomDogImages: async (count: number = 10): Promise<string[]> => {
     try {
       const response = await axios.get<{message: string[], status: string}>(
