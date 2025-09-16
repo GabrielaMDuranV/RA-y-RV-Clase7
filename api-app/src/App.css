@@ -1,0 +1,166 @@
+/* App.css - Estilos para la aplicación de perritos */
+.App {
+  text-align: center;
+}
+
+.modelo-lista-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+  min-height: 100vh;
+}
+
+.modelo-lista-container h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button-group {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 12px 24px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover:not(:disabled) {
+  background-color: #ff8e8e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.action-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.error-message {
+  color: #ffffff;
+  background-color: #ff4757;
+  border: 1px solid #ff4757;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 500px;
+  font-weight: bold;
+}
+
+.loading {
+  font-size: 22px;
+  color: white;
+  margin: 40px 0;
+  font-weight: bold;
+}
+
+.dog-images-container {
+  margin-top: 30px;
+}
+
+.multiple-dogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dog-image-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  background-color: white;
+  padding: 10px;
+}
+
+.dog-image-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.dog-image.single {
+  max-width: 500px;
+  height: auto;
+  max-height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  border: 5px solid white;
+}
+
+.single-dog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modelo-lista-container {
+    padding: 15px;
+  }
+  
+  .modelo-lista-container h1 {
+    font-size: 2rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .action-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .multiple-dogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dog-image {
+    height: 150px;
+  }
+  
+  .dog-image.single {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .multiple-dogs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modelo-lista-container h1 {
+    font-size: 1.8rem;
+  }
+}
