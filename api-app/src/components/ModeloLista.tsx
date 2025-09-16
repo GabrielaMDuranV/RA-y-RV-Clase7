@@ -8,7 +8,7 @@ const ModeloLista: React.FC = () => {
   const [multipleDogs, setMultipleDogs] = useState<string[]>([]);
   const [showMultiple, setShowMultiple] = useState<boolean>(false);
 
-  // Fetch single random dog image
+  
   const fetchRandomDog = async () => {
     try {
       setLoading(true);
@@ -24,7 +24,6 @@ const ModeloLista: React.FC = () => {
     }
   };
 
-  // Fetch multiple random dog images
   const fetchMultipleDogs = async () => {
     try {
       setLoading(true);
@@ -40,7 +39,7 @@ const ModeloLista: React.FC = () => {
     }
   };
 
-  // Fetch initial dog image on component mount
+ 
   useEffect(() => {
     fetchRandomDog();
   }, []);
